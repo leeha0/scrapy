@@ -22,11 +22,16 @@ shub deploy
 
 ## Etc
 ```
+scrapy genspider quote toscrape.com
+
 scrapy shell <fetchUrl>
 > print(response.text)
 > response.css(<CSS Selector>)[]
 > ::attr, ::text
 > extract(), extract_first()
+
+scrapy runspider quotes.py -o items.json
+scrapy crawl quote
 ```
 
 * [Scrapinghub](https://scrapinghub.com/) - Turn websites into data

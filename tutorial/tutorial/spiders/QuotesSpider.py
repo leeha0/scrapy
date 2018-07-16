@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import scrapy
 
 
@@ -16,6 +17,8 @@ class QuotesSpider(scrapy.Spider):
     #         yield scrapy.Request(url=url, callback=self.psrse)
 
     def parse(self, response):
+        self.log('visited: ' + response.url)
+
         for quote in response.css('div.quote'):
             yield {
                 'text': quote.css('span.text::text').extract_first(),
@@ -33,9 +36,3 @@ class QuotesSpider(scrapy.Spider):
         # with open(filename, 'wb') as f:
         #     f.write(response.body)
         # self.log('Saved file %s' % filename)
-
-# response.css('title::text').extract() # Only Text
-# response.css('title').extract() # With Tag
-
-# json write
-# scrapy crawl naver-crawler -o results.json
