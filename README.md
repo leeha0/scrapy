@@ -8,7 +8,7 @@ Scrapinghub 테스트를 위한 프로젝트
 ## Getting Started
 
 ### Prerequisites 
-Python 2.7 or Python3.4
+  - Python 2.7 or 3.4
 
 ### Installing
 * Install Scrapy Lib
@@ -33,20 +33,24 @@ shub login
 ```
 * Deploy
 ```
+cd tutorial
 shub deploy 
 > Enter Your Project ID
 ```
 
-## Etc
-```
+## CLI
+```bash
+# scrapy genspider : Generate new spider using pre-defined templates
 scrapy genspider quote toscrape.com
 
+# scrapy shell : Interactive scraping console
 scrapy shell <fetchUrl>
 > print(response.text)
 > response.css(<CSS Selector>)[]
 > ::attr, ::text
 > extract(), extract_first()
 
+# scrapy runspider : Run a self-contained spider (without creating a project)
 scrapy runspider quotes.py -o items.json
 scrapy crawl quote
 ```

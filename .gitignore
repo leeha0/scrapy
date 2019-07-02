@@ -4,4 +4,3 @@ tutorial/project.egg-info
 tutorial/scrapinghub.yml
 tutorial/tutorial/__pycache__
 tutorial/tutorial/spiders/__pycache__
-NaverSpider.py

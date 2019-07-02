@@ -47,7 +47,7 @@ class QuotesSpider(scrapy.Spider):
 
         # file write
         # page = response.url.split('/')[-2]
-        # filename = 'naver-%s.html' % page
+        # filename = 'shop-%s.html' % page
         # with open(filename, 'wb') as f:
         #     f.write(response.body)
         # self.log('Saved file %s' % filename)
